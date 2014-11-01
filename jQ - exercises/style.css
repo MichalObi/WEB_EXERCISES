@@ -8,6 +8,7 @@
 
 .X { 
 	list-style-type: none;
+	display: none;
 }
 
 .greeny {
@@ -15,5 +16,14 @@
 }
 
 .photo {
-	display: none;
+	/*display: none;*/
 }
+
+h4 {
+	text-align: center;
+}
+
+.anim_button {
+	margin-left: 25%;
+}
+

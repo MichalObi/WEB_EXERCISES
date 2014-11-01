@@ -1,10 +1,10 @@
-#main_container {
+/*#fullpage {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	margin-right: -50%;
 	transform: translate(-50%, -50%) 
-}
+}*/
 
 .X { 
 	list-style-type: none;
@@ -27,3 +27,7 @@ h4 {
 	margin-left: 25%;
 }
 
+#nxt_pg {
+	float: right;
+	margin: 5px 5px 0px 0px;
+}

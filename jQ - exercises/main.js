@@ -1,4 +1,12 @@
+
 $(document).ready(function(){
+	$('#fullpage').fullpage({
+				menu: '#menu',
+				anchors: ['firstPage', 'secondPage', '3rdPage'],
+				sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+				autoScrolling: false
+	});
+
 	/* adding css */
 	$(".X li:first-child").css({"color": "red"});
 	$(".Y li:first-child").css({"font-weight": "bold", "color": "black"});
@@ -31,19 +39,28 @@ $(".close_x").on("click", function() {
 $("#button_1").on("click", function() {
 	$("#button_1").toggleClass('btn-danger', 'btn-success');
 
-	if($("#button_1").hasClass("btn-danger")) {
+	if($(this).hasClass("btn-danger")){
+		$(this).text("Undo Animation!")
 		$("#panel_1").animate({'top': '-100px'}, 'fast');
-	} else {
+	}
+
+	else {
+		$(this).text("Do Animation!")
 		$("#panel_1").animate({'top': '0px'}, 'fast');
 	}
+
 });
 
 $("#button_2").on("click", function() {
 	$("#button_2").toggleClass('btn-danger', 'btn-success');
 
-	if($("#button_2").hasClass("btn-danger")) {
+	if($(this).hasClass("btn-danger")){
+		$(this).text("Undo Animation!")
 		$("#panel_2").animate({'top': '-100px'}, 'fast');
-	} else {
+	}
+
+	else {
+		$(this).text("Do Animation!")
 		$("#panel_2").animate({'top': '0px'}, 'fast');
 	}
 });
@@ -51,10 +68,15 @@ $("#button_2").on("click", function() {
 $("#button_3").on("click", function() {
 	$("#button_3").toggleClass('btn-danger', 'btn-success');
 
-	if($("#button_3").hasClass("btn-danger")) {
+	if($(this).hasClass("btn-danger")){
+		$(this).text("Undo Animation!")
 		$("#panel_3").animate({'top': '-100px'}, 'fast');
-	} else {
+	}
+
+	else {
+		$(this).text("Do Animation!")
 		$("#panel_3").animate({'top': '0px'}, 'fast');
 	}
 });
+
 });

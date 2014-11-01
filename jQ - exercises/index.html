@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-	<body>S
+	<body>
 
 	<div class="section" id="fullpage">
 	    <div class="slide" id="slide1">
@@ -96,9 +96,16 @@
 		</div>
 
 
-	    <div class="slide" id="slide2">
-			<h1>Horizontal sliders!</h1>
-			<img src="imgs/iphone-blue.png" alt="iphone" id="iphone-two" />
+	    <div class="slide row" id="slide2">
+	    	<div class="col-md-12">
+				<h1>I can calculate area of circle. Just give me radius.</h1>
+			</div>
+			<div class="col-md-12">
+				<input type="number" class="form-control input-lg" id="radius_imp">
+			</div>
+			<div class="col-md-12">
+				<h1>When radius is <span id="radius"></span> is the area of circle is <span id="area"></span></h1>
+			</div>		
 		</div>
 
 		 <div class="slide" id="slide3">

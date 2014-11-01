@@ -7,10 +7,10 @@ $(document).ready(function(){
 				autoScrolling: false
 	});
 
-	/* adding css */
-	$(".X li:first-child").css({"color": "red"});
-	$(".Y li:first-child").css({"font-weight": "bold", "color": "black"});
-	$(".X").find(".Y").find("#special").css({"font-style": "italic"}).addClass("greeny");
+		/* adding css */
+$(".X li:first-child").css({"color": "red"});
+$(".Y li:first-child").css({"font-weight": "bold", "color": "black"});
+$(".X").find(".Y").find("#special").css({"font-style": "italic"}).addClass("greeny");
 
 $(".btn-primary").on("click", function(){
 	var next_li_item = $("<li>Atrakcja_4</li>");
@@ -37,46 +37,67 @@ $(".close_x").on("click", function() {
 });
 
 $("#button_1").on("click", function() {
-	$("#button_1").toggleClass('btn-danger', 'btn-success');
 
-	if($(this).hasClass("btn-danger")){
+	if($("#button_1").hasClass("btn-success")){
+		$(this).removeClass("btn-success");
+		$(this).addClass("btn-danger");
 		$(this).text("Undo Animation!")
 		$("#panel_1").animate({'top': '-100px'}, 'fast');
+		
 	}
 
 	else {
-		$(this).text("Do Animation!")
+		$(this).removeClass("btn-danger");
+		$(this).addClass("btn-success");
+		$(this).text("DO Animation!");
 		$("#panel_1").animate({'top': '0px'}, 'fast');
 	}
 
 });
 
-$("#button_2").on("click", function() {
-	$("#button_2").toggleClass('btn-danger', 'btn-success');
 
-	if($(this).hasClass("btn-danger")){
+$("#button_2").on("click", function() {
+
+	if($("#button_2").hasClass("btn-success")){
+		$(this).removeClass("btn-success");
+		$(this).addClass("btn-danger");
 		$(this).text("Undo Animation!")
 		$("#panel_2").animate({'top': '-100px'}, 'fast');
+		
 	}
 
 	else {
-		$(this).text("Do Animation!")
+		$(this).removeClass("btn-danger");
+		$(this).addClass("btn-success");
+		$(this).text("DO Animation!");
 		$("#panel_2").animate({'top': '0px'}, 'fast');
 	}
 });
 
 $("#button_3").on("click", function() {
-	$("#button_3").toggleClass('btn-danger', 'btn-success');
 
-	if($(this).hasClass("btn-danger")){
+	if($("#button_3").hasClass("btn-success")){
+		$(this).removeClass("btn-success");
+		$(this).addClass("btn-danger");
 		$(this).text("Undo Animation!")
 		$("#panel_3").animate({'top': '-100px'}, 'fast');
+		
 	}
 
 	else {
-		$(this).text("Do Animation!")
+		$(this).removeClass("btn-danger");
+		$(this).addClass("btn-success");
+		$(this).text("DO Animation!");
 		$("#panel_3").animate({'top': '0px'}, 'fast');
 	}
+});
+
+$("#radius_imp").on("keyup", function() {
+	var rad = +$(this).val();
+	var area = Math.round((Math.PI*rad*rad)*100)/100;
+	$("#radius").text(rad);
+	$("#area").text(area);
+
 });
 
 });

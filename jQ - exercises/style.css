@@ -72,3 +72,16 @@ p {
 	color: white;
 	font-size: 50px;
 }
+
+.random_div {
+	width:150px; 
+	height:150px; 
+	background:#ececec;
+	margin-top: 10px;
+	margin: 0 auto;
+}
+
+.testclass {
+	font-size: 40px;
+	color: red;
+}

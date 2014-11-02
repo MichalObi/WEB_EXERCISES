@@ -93,10 +93,45 @@ $("#button_3").on("click", function() {
 });
 
 $("#radius_imp").on("keyup", function() {
+
 	var rad = +$(this).val();
 	var area = Math.round((Math.PI*rad*rad)*100)/100;
-	$("#radius").text(rad);
-	$("#area").text(area);
+	$("#radius").text(rad).addClass("result");
+	$("#area").text(area).addClass("result");
+
+});
+
+$("#draw_circ").on("click", function() {
+
+	if($(this).hasClass("btn-warning")){
+	// canvas circle - use value of rad in input
+	var rad = +$("#radius_imp").val();
+	var canvas = document.getElementById('myCanvas');
+	var context = canvas.getContext('2d');
+	var centerX = canvas.width / 2;
+	var centerY = canvas.height / 2;
+
+	context.beginPath();
+	context.arc(centerX, centerY, rad, 0, 2 * Math.PI, false);// start angle from 0 and angle with 2PI = full circle
+	context.fillStyle = 'green';
+	context.fill();
+	context.lineWidth = 5;
+	context.strokeStyle = '#003300';
+	context.stroke();
+
+	$(this).removeClass("btn-warning");
+	$(this).addClass("btn-success");
+	$(this).text("Undo");
+
+} else {
+
+	var canvas = document.getElementById('myCanvas');
+	canvas.width = canvas.width;
+
+	$(this).removeClass("btn-success");
+	$(this).addClass("btn-warning");
+	$(this).text("Draw circle");
+}
 
 });
 

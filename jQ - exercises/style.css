@@ -19,7 +19,7 @@
 	/*display: none;*/
 }
 
-h4 {
+h4, h3 {
 	text-align: center;
 }
 
@@ -42,4 +42,23 @@ div .col-md-12 h1 {
 #radius_imp {
 	width: 50%;
     margin: 0 auto;
+}
+
+.area_of_circle {
+	font-family:Lucida Console;
+	color: #2F2D2D;
+}
+
+.radius_style {
+	font-family:Impact;
+	color: #3E4AF2;
+}
+
+.result {
+	font-family:Verdana;
+	color: #F1FF1E;
+}
+
+#draw_circ {
+	margin-left: 30%;
 }

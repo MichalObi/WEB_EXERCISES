@@ -98,19 +98,18 @@
 
 	    <div class="slide row" id="slide2">
 	    	<div class="col-md-12">
-				<h1>I can calculate <span class="area_of_circle">Area of Circle</span>. Just type down <span class="radius_style">RADIUS</span> of your circle.</h1>
+				<h1>I can calculate <span class="area_of_circle">Area of Circle</span>.</h1>
+				<h2>Just type down <span class="radius_style">RADIUS</span> of your circle.</h2>
 			</div>
 			<div class="col-md-12">
 				<input type="text" placeholder="Type your radius" onfocus="this.placeholder=''" onblur="this.placeholder='Type your radius'" class="form-control input-lg" id="radius_imp">
 			</div>
 			<div class="col-md-12">
 				<h1>When <span class="radius_style">RADIUS</span> is <span id="radius"></span> is the <span class="area_of_circle">Area of Circle</span> is <span id="area"></span></h1>
+				<h3 id="circ_alert">Draw circle with your radius (in px). To proper display radius value must be less then 100.</h3>
 			</div>
 			<div class="col-md-6">
-				<h3>Draw circle with your radius (in px)</h3>
-				<div class="col-md-12">
-					<button class="btn-lg btn-warning" id="draw_circ">Draw circle</button>
-				</div>	
+					<button class="btn-lg btn-warning" id="draw_circ">Draw circle</button>	
 			</div>
 			<div class="col-md-6">
 			    <canvas id="myCanvas" width="578" height="200"></canvas>
@@ -118,10 +117,37 @@
 		</div>
 
 		 <div class="slide" id="slide3">
-			<h1>dasdas</h1>
-			<img src="imgs/iphone-blue.png" alt="iphone" id="iphone-two" />
+		 	<div class="container">
+		 		<p>12 jQuerry Methods example</p>
+		 		<div class="row">
+		 			<div class="col-md-4">
+		 				<h1>after() and before()</h1>
+		 				<h2 id="random_1">Random h2</h2>
+		 				<div class="btn-group">
+						  <button type="button" class="btn btn-default" id="after">after()</button>
+						  <button type="button" class="btn btn-default" id="before">before()</button>
+						  <button type="button" class="btn btn-default" id="undo_1">undo</button>
+						</div>
+		 			</div>
+		 			<div class="col-md-4">
+		 				<h1>change() method</h1>
+		 				<h3>Type sth to input and press enter to see alert.</h3>
+		 				<input type="text" id="ex_input">
+		 			</div>
+		 			<div class="col-md-4"><h1>Jq example</h1></div>
+		 		</div>
+		 		<div class="row">
+		 			<div class="col-md-4"><h1>Jq example</h1></div>
+		 			<div class="col-md-4"><h1>Jq example</h1></div>
+		 			<div class="col-md-4"><h1>Jq example</h1></div>
+		 		</div>
+		 		<div class="row">
+		 			<div class="col-md-4"><h1>Jq example</h1></div>
+		 			<div class="col-md-4"><h1>Jq example</h1></div>
+		 			<div class="col-md-4"><h1>Jq example</h1></div>
+		 		</div>
+		 	</div>
 		</div>
-
 		</div>
 	</body>
 
@@ -130,4 +156,5 @@
 	<script type="text/javascript" src="jquery.slimscroll.min.js"></script>
 	<script type="text/javascript" src="jquery.fullPage.js"></script>
 	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="examples.js"></script>
 </html>

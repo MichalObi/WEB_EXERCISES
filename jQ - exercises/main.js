@@ -106,6 +106,8 @@ $("#draw_circ").on("click", function() {
 	if($(this).hasClass("btn-warning")){
 	// canvas circle - use value of rad in input
 	var rad = +$("#radius_imp").val();
+
+	if(rad < 100) {
 	var canvas = document.getElementById('myCanvas');
 	var context = canvas.getContext('2d');
 	var centerX = canvas.width / 2;
@@ -122,6 +124,9 @@ $("#draw_circ").on("click", function() {
 	$(this).removeClass("btn-warning");
 	$(this).addClass("btn-success");
 	$(this).text("Undo");
+} else {
+	$("#circ_alert").text("It is too big. Make sure your radius is < then 100 px.");
+}
 
 } else {
 

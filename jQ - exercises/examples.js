@@ -56,4 +56,33 @@ $(document).ready(function() {
 	$("#eq_list li:eq(0)").addClass('testclass');
 
 
+	$("#bind_button").bind("click", function() {
+				if($(this).hasClass("btn-default")) {
+					$(this).toggleClass('btn-default', false);
+					$(this).toggleClass('btn-success', true);
+					$(this).text("Unbind");
+					$("#bind_div").bind("mouseenter.hooverEfect mouseleave.hooverEfect", function() { // namespace after event
+					$(this).toggleClass('hoover_class');
+			});
+
+	} else {
+			$(this).toggleClass('btn-success', false);
+			$(this).toggleClass('btn-default', true);
+			$(this).text("Bind");
+			$("#bind_div").unbind();
+	}
+	});
+
+	$("#grep_btn").on("click", function() {
+		var nums = '1,2,3,4,5,6,7,8,9,10'.split(',');
+ 
+		nums = $.grep(nums, function(num, index) {
+		  // num = the current value for the item in the array
+		  // index = the index of the item in the array
+		  return num > 5 // returns a boolean
+		});
+		$("#grep_result").text(nums);
+	});
+
+
 });

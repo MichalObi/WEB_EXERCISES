@@ -121,62 +121,85 @@
 		 		<p>12 jQuerry Methods example</p>
 		 		<div class="row">
 		 			<div class="col-md-4">
-		 				<h1>after() and before()</h1>
+		 				<h1>before() / after()</h1>
 		 				<h2 id="random_1">Random h2</h2>
-		 				<div class="btn-group">
-						  <button type="button" class="btn btn-default" id="after">after()</button>
-						  <button type="button" class="btn btn-default" id="before">before()</button>
-						  <button type="button" class="btn btn-default" id="undo_1">undo</button>
-						</div>
-		 			</div>
+			 				<div class="align_center">
+				 				<div class="btn-group btn-group_center">
+				 					<button type="button" class="btn btn-default" id="before">before()</button>
+								  	<button type="button" class="btn btn-default" id="after">after()</button>
+			 					</div>
+			 				</div>
+		 				</div>
 		 			<div class="col-md-4">
 		 				<h1>change() method</h1>
 		 				<h3>Type sth to input and press enter to see alert.</h3>
-		 				<input type="text" id="ex_input">
+		 				<div class="align_center">
+		 					<input type="text" id="ex_input">
+		 				</div>
 		 			</div>
 		 			<div class="col-md-4">
-		 				<h1>date() and removeData</h1>
-		 				<button class="btn btn-default" id="add_data">Add data to h3</button>
-		 				<h3 id="data_store">I store a data</h3>
+		 				<h1>date() / removeData</h1>
+		 				<div class="align_center">
+		 					<button class="btn btn-default" id="add_data">Add data to h3</button>
+		 				</div>
+		 				<h3 id="data_store">I can store a data.</h3>
 		 				<h3>My secret data is <span id="display_data">empty</span></h3>
 		 			</div>
 		 		</div>
 		 		<div class="row">
 		 			<div class="col-md-4">
-		 				<h1>queue() / dequeue() + animation</h1>
-		 				<div class="btn-group">
-						  <button type="button" class="btn btn-default" id="start">Start Animating</button>
-						  <button type="button" class="btn btn-default" id="reset">Stop Animating</button>
-						  <button type="button" class="btn btn-default" id="add">Add to Queue</button>
+		 				<h1>queue() / dequeue()</h1>
+		 				<div class="align_center">
+			 				<div class="btn-group btn-group_center">
+							  <button type="button" class="btn btn-default" id="start">Start Animating</button>
+							  <button type="button" class="btn btn-default" id="reset">Stop Animating</button>
+							  <button type="button" class="btn btn-default" id="add">Add to Queue</button>
+							</div>
 						</div>
-					<div id="div_to_animate" class="random_div"></div>
+						<div id="div_to_animate" class="random_div"></div>
 		 			</div>
 		 			<div class="col-md-4">
 		 				<h1>delay()</h1>
-		 				<button class="btn btn-default" id="delay_btn">Hide / show button</button>
+		 				<div class="align_center">
+		 					<button class="btn btn-default" id="delay_btn">Hide / show button</button>
+		 				</div>
 		 				<div class="random_div" id="delay_div"></div>
 		 			</div>
 		 			<div class="col-md-4">
 		 				<h1>eq()</h1>
-		 				<ul id="eq_list">
-		 					<li>one</li>
-		 					<li>two</li>
-		 					<li>three</li>
-		 					<li>four</li>
-		 				</ul>
+		 				<div class="align_center">
+			 				<ul id="eq_list">
+			 					<li>one</li>
+			 					<li>two</li>
+			 					<li>three</li>
+			 					<li>four</li>
+			 				</ul>
+		 				</div>
 		 			</div>
 		 		</div>
 		 		<div class="row">
 		 			<div class="col-md-4">
-		 				<h1>bind(),unbind()</h1>
-		 				<button class="btn btn-default" id="bind_button">Bind</button>
+		 				<h1>bind() / unbind()</h1>
+		 				<div class="align_center">
+		 					<button class="btn btn-default" id="bind_button">Bind</button>
+		 				</div>
 		 				<div class="random_div" id="bind_div"></div>
 		 			</div>
-		 			<div class="col-md-4"><h1>Use grep</h1>
-		 				<button class="btn btn-default" id="grep_btn">Try to use grep</button>
-		 				<span id="grep_result"></span>
+		 			<div class="col-md-4">
+		 				<h1>$.grep()</h1>
+		 				<h3>Filter an array from 1-10, to only numbers > 5</h3>
+		 				<div class="align_center">
+		 					<button class="btn btn-default" id="grep_btn">Try to use grep</button>
+		 				</div>
+		 				<h4>Array after filtering with Grep: <span id="grep_result"></span></h4>
 		 			</div>
-		 			<div class="col-md-4"><h1>Jq example</h1></div>
+		 			<div class="col-md-4">
+		 				<h1>wrap() / unwrap()</h1>
+		 				<div class="align_center">
+		 					<button class="btn btn-default" id="wrap_btn">Wrap this h3.</button>
+		 				</div>
+		 				<h3 id="h3_to_wrap">Wrap me</h3>
+		 			</div>
 		 		</div>
 		 	</div>
 		</div>

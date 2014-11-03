@@ -19,8 +19,12 @@
 	/*display: none;*/
 }
 
-h4, h3, h2 {
+h4, h3, h2,h1 {
 	text-align: center;
+}
+
+h1 {
+	color: white;
 }
 
 .anim_button {
@@ -77,16 +81,35 @@ p {
 	width:150px; 
 	height:150px; 
 	background:#ececec;
-	margin-top: 10px;
 	margin: 0 auto;
+	margin-top:10px;
 }
 
-.testclass {
+.eqclass {
 	font-size: 40px;
-	color: red;
+	color: #5CB85C;
 }
 
 .hoover_class {
 	background-color: #4285f4;
 	border: 1px solid #000000;
 }
+
+
+.btn-group_center {
+    margin: 0 auto; 
+    text-align: center;
+    width: inherit;
+    display: inline-block;
+}
+
+.align_center {
+    text-align: center;
+}
+ 
+#display_data {
+	color: #5CB85C;
+}
+
+
+

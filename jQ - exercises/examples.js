@@ -1,11 +1,18 @@
 $(document).ready(function() { 
 	$("#after").on("click", function() {
+		if($(this).hasClass("btn-default")) {
+			$(this).toggleClass('btn-default', false);
+			$(this).toggleClass('btn-success', true);
 		$("#random_1").after("<h3>It is after random h2</h3>");
-		$(this).find("h3").addClass("h3_after");
+	}
 	 });
 
 	$("#before").on("click", function() {
+		if($(this).hasClass("btn-default")) {
+			$(this).toggleClass('btn-default', false);
+			$(this).toggleClass('btn-success', true);
 		$("#random_1").before("<h3>It is before random h2</h3>");
+	}
 	 });
 
 	$("#ex_input").change(function() {
@@ -13,7 +20,7 @@ $(document).ready(function() {
 	});
 
 	$("#add_data").on("click", function() {
-		if($("#add_data").hasClass("btn-default")) {
+		if($(this).hasClass("btn-default")) {
 			$(this).toggleClass('btn-default', false);
 			$(this).toggleClass('btn-success', true);
 			$(this).text("Remove data from h3");
@@ -29,7 +36,17 @@ $(document).ready(function() {
 	});
 
 	$('#start').click(animateBox);
- 
+
+		$("#start, #reset, #add").on("click", function() {
+		if($(this).hasClass("btn-default")) {
+			$(this).toggleClass('btn-default', false);
+			$(this).toggleClass('btn-success', true);
+		} else {
+			$(this).toggleClass('btn-success', false);
+			$(this).toggleClass('btn-default', true);
+		}
+	});
+
 	$('#reset').click(function() {
 	    $('#div_to_animate').queue('fx', []); // empty a queue - no animation to do - stop
 	});
@@ -53,7 +70,7 @@ $(document).ready(function() {
 		$('#delay_div').hide("slow").delay(2000).show("slow"); // div will stay hidden for 2 seconds before showing.
 	 });
 
-	$("#eq_list li:eq(0)").addClass('testclass');
+	$("#eq_list li:eq(0)").addClass('eqclass');
 
 
 	$("#bind_button").bind("click", function() {
@@ -61,6 +78,7 @@ $(document).ready(function() {
 					$(this).toggleClass('btn-default', false);
 					$(this).toggleClass('btn-success', true);
 					$(this).text("Unbind");
+					$("#bind_div").append("<h2>HooverME</h2>");
 					$("#bind_div").bind("mouseenter.hooverEfect mouseleave.hooverEfect", function() { // namespace after event
 					$(this).toggleClass('hoover_class');
 			});
@@ -69,11 +87,16 @@ $(document).ready(function() {
 			$(this).toggleClass('btn-success', false);
 			$(this).toggleClass('btn-default', true);
 			$(this).text("Bind");
+			$("#bind_div").text("");
 			$("#bind_div").unbind();
 	}
 	});
 
 	$("#grep_btn").on("click", function() {
+
+		$(this).toggleClass('btn-default', false);
+		$(this).toggleClass('btn-success', true);
+		$(this).text("You use grep.")
 		var nums = '1,2,3,4,5,6,7,8,9,10'.split(',');
  
 		nums = $.grep(nums, function(num, index) {
@@ -84,5 +107,17 @@ $(document).ready(function() {
 		$("#grep_result").text(nums);
 	});
 
-
+	$("#wrap_btn").on("click", function() {
+		if($(this).hasClass("btn-default")) {
+			$(this).toggleClass('btn-default', false);
+			$(this).toggleClass('btn-success', true);
+			$(this).text("Unwrap me !");
+			$("#h3_to_wrap").wrap('<div class="random_div" />');
+		} else {
+			$(this).toggleClass('btn-default', true);
+			$(this).toggleClass('btn-success', false);
+			$(this).text("Wrap this h3");
+			$("#h3_to_wrap").unwrap();
+		}
+	});
 });
